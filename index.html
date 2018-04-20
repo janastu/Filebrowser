@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>Upload files</title>
+
+
+	<!-- Include our stylesheet -->
+	<link href="assets/css/styles.css" rel="stylesheet"/>
+	<script type="text/javascript">
+		function uploadscript(){
+			if (document.cookie.search(/uploadfiles=true/)>-1){
+				alert("upload successful");
+			document.cookie='uploadfiles=false';
+			
+			}
+			
+		}
+	</script>
+
+</head>
+<body onload="uploadscript();">
+<header style="padding:15px;">
+<img src="assets/cloud-icon-png-clouds.png" alt="logo" width="100px" height="auto" />
+<span style="color: #fff; font-weight:bolder; margin-left:-100px; "> Kote Cloud </span>
+</header>
+
+	<div class="filemanager">
+		<!--<div class="upload">-->
+			<form method="POST" action="dbconnect.php" name="submit" enctype="multipart/form-data" class="upload">
+			<h1>File Upload</h1>
+         		<label>
+				<span>Your Name:</span> 
+				<input type="text" name="username" placeholder="name for the directory structure"/>
+			</label>
+			<label>
+ 				<!--<span>click "Choose File" button to choose a file from your phone/computer to upload</span>-->
+ 				<span>Choose a file</span>
+				<input type="file" name="imagepath" value="Choose File" />
+			</label>
+			<label>
+				<span>&nbsp;</span>
+                        	<input type="submit" name="submit" class="submit" value="Submit" />
+			</label>
+		</form>
+
+		<!--</div>-->
+
+		<div class="search">
+			<input type="search" placeholder="Find a file.." />
+		</div>
+
+		
+
+		<div class="breadcrumbs"></div>
+
+		<ul class="data"></ul>
+
+		<div class="nothingfound">
+			<div class="nofiles"></div>
+			<span>No files here.</span>
+		</div>
+
+	</div>
+
+	<!--<footer>
+        <a class="tz" href="http://tutorialzine.com/2014/09/cute-file-browser-jquery-ajax-php/">Cute File Browser with jQuery, AJAX and PHP</a>
+        <div id="tzine-actions"></div>
+        <span class="close"></span>
+    </footer>-->
+
+	<!-- Include our script files -->
+	<!--<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>-->
+	<script src="assets/js/jquery-1.11.0.min.js"></script>
+	<script src="assets/js/script.js"></script>
+
+</body>
+</html>
