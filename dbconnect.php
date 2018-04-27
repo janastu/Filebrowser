@@ -7,7 +7,7 @@ if(isset($_POST['submit'])) {
 		      {
 			         mkdir("./files/".$name);
 				    }
-	if(count($_FILES['imagepath']['name'] == "audio/mp3")>0){
+	if(count($_FILES['imagepath']['name']){
 		$upload_dir = "./files/".$name."/" ;
 		 for($i=0;$i<count($_FILES['imagepath']['name']); $i++)
 		 {
