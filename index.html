@@ -12,7 +12,7 @@
 	<script type="text/javascript">
 		function uploadscript(){
 			if (document.cookie.search(/uploadfiles=true/)>-1){
-				alert("upload successful");
+				<!--	alert("upload successful");-->
 			document.cookie='uploadfiles=false';
 			
 			}
@@ -21,15 +21,18 @@
 	</script>
 
 </head>
-<body onload="uploadscript();">
-<header style="padding:15px;">
-<img src="assets/cloud-icon-png-clouds.png" alt="logo" width="100px" height="auto" />
-<span style="color: #fff; font-weight:bolder; margin-left:-100px; "> Kote Cloud </span>
-</header>
+<body onload="uploadscript();" >
 
+<header style="padding:15px;">
+<img src="assets/cloud-icon-png-clouds.png" alt="logo" width="10px">
+<span style="color: #fff; font-weight:bolder; margin-left:-100px;">  </span>
+</header>
+<h1><marquee><font color="white"> WELCOME TO COW MESH </font></marquee> </h1>
 	<div class="filemanager">
 		<!--<div class="upload">-->
-			<form method="POST" action="dbconnect.php" name="submit" enctype="multipart/form-data" class="upload">
+		
+		<form method="POST" action="dbconnect.php" name="submit" enctype="multipart/form-data" class="upload" multiple>
+	                 
 			<h1>File Upload</h1>
          		<label>
 				<span>Your Name:</span> 
@@ -38,7 +41,7 @@
 			<label>
  				<!--<span>click "Choose File" button to choose a file from your phone/computer to upload</span>-->
  				<span>Choose a file</span>
-				<input type="file" name="imagepath" value="Choose File" />
+				<input type="file" name="imagepath[]" id=imagepath  value="Choose File" multiple />
 			</label>
 			<label>
 				<span>&nbsp;</span>
@@ -56,10 +59,23 @@
 
 		<div class="breadcrumbs"></div>
 
-		<ul class="data"></ul>
 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+	      width: 183px;
+}
+
+			img:hover {
+				    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+			}
+</style>
+<a>
+ <img class="data" style="width:10px">
+  
+</a>
 		<div class="nothingfound">
-			<div class="nofiles"></div>
+			<div class="nofiles"></div> 
 			<span>No files here.</span>
 		</div>
 

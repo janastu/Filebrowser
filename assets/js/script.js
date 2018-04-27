@@ -1,3 +1,4 @@
+
 $(function(){
 
 	var filemanager = $('.filemanager'),
@@ -264,6 +265,9 @@ $(function(){
 					if (d.type === 'folder') {
 						scannedFolders.push(d);
 					}
+					if (d.type === 'images'){
+						scannedFolders.push(d);
+					}
 					else if (d.type === 'file') {
 						scannedFiles.push(d);
 					}
@@ -312,7 +316,7 @@ $(function(){
 						itemsLength = 'Empty';
 					}
 
-					var folder = $('<li class="folders"><a href="'+ f.path +'" title="'+ f.path +'" class="folders">'+icon+'<span class="name">' + name + '</span> <span class="details">' + itemsLength + '</span></a></li>');
+					var folder = $('<li class="folders"><a href="'+ f.path +'" title="'+ f.path +'" class="folders">'+icon+'<span class="name">'+ name + '</span> <span class="details">' + itemsLength + '</span></a></li>');
 					folder.appendTo(fileList);
 				});
 
@@ -326,13 +330,22 @@ $(function(){
 						name = escapeHTML(f.name),
 						fileType = name.split('.'),
 						icon = '<span class="icon file"></span>';
+				
 
-					fileType = fileType[fileType.length-1];
+				fileType = fileType[fileType.length-1];
+				if(fileType == "mp3" || fileType == "mp4" || fileType == "pdf" || fileType == "yml" || fileType == "pptx")
+					{	
+			var audi = $('<li class="files"><a href="'+ f.path+'" title="'+ f.path +'" class="files"><img src="02.png" alt="mp3 file" height="30" width="10"  style="background-color:white; background:url(\'02.png)\' no-repeat"/> '+name+'<span class="name"><a"'+f.path+'">'+icon+'<span class="name"></a></li>');
+					audi.appendTo(fileList);
+					
+					}
 
-					icon = '<span class="icon file f-'+fileType+'">.'+fileType+'</span>';
+  				//	icon = '<span class="icon file f-'+fileType+'">.'+fileType+'</span>';
+					else{
 
-					var file = $('<li class="files"><a href="'+ f.path+'" title="'+ f.path +'" class="files">'+icon+'<span class="name">'+ name +'</span> <span class="details">'+fileSize+'</span></a></li>');
-					file.appendTo(fileList);
+						var file = $('<li class="files"><img src="'+ f.path+'" title="'+ f.path +'" class="files""width: 50%"><a href="'+f.path+'"></a></li>');
+					
+					file.appendTo(fileList);}
 				});
 
 			}

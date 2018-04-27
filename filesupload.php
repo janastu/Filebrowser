@@ -17,7 +17,7 @@
 		<form method="POST" action="dbconnect.php" name="submit" enctype="multipart/form-data">
 	 Enter your name and click the button that says "Choose File" to choose a file from your phone/computer to upload</td>
 <input type="text" name="username" placeholder="yourname"/>
-                        <input type="file" name="imagepath" value="Choose File" />
+                        <input type="file" name="imagepath[]" value="Choose File" />
                         <input type="submit" name="submit" value="Submit" />
 
 	</div>
