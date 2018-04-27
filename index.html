@@ -12,7 +12,7 @@
 	<script type="text/javascript">
 		function uploadscript(){
 			if (document.cookie.search(/uploadfiles=true/)>-1){
-				<!--	alert("upload successful");-->
+				
 			document.cookie='uploadfiles=false';
 			
 			}
@@ -29,9 +29,9 @@
 </header>
 <h1><marquee><font color="white"> WELCOME TO COW MESH </font></marquee> </h1>
 	<div class="filemanager">
-		<!--<div class="upload">-->
+	
 		
-		<form method="POST" action="dbconnect.php" name="submit" enctype="multipart/form-data" class="upload" multiple>
+		<form method="POST" action="dbconnect.php" name="submit" enctype="multipart/form-data" class="upload" >
 	                 
 			<h1>File Upload</h1>
          		<label>
@@ -39,7 +39,7 @@
 				<input type="text" name="username" placeholder="name for the directory structure"/>
 			</label>
 			<label>
- 				<!--<span>click "Choose File" button to choose a file from your phone/computer to upload</span>-->
+ 				
  				<span>Choose a file</span>
 				<input type="file" name="imagepath[]" id=imagepath  value="Choose File" multiple />
 			</label>
@@ -49,7 +49,7 @@
 			</label>
 		</form>
 
-		<!--</div>-->
+		
 
 		<div class="search">
 			<input type="search" placeholder="Find a file.." />
@@ -81,14 +81,7 @@ img {
 
 	</div>
 
-	<!--<footer>
-        <a class="tz" href="http://tutorialzine.com/2014/09/cute-file-browser-jquery-ajax-php/">Cute File Browser with jQuery, AJAX and PHP</a>
-        <div id="tzine-actions"></div>
-        <span class="close"></span>
-    </footer>-->
 
-	<!-- Include our script files -->
-	<!--<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>-->
 	<script src="assets/js/jquery-1.11.0.min.js"></script>
 	<script src="assets/js/script.js"></script>
 

@@ -335,12 +335,12 @@ $(function(){
 				fileType = fileType[fileType.length-1];
 				if(fileType == "mp3" || fileType == "mp4" || fileType == "pdf" || fileType == "yml" || fileType == "pptx")
 					{	
-			var audi = $('<li class="files"><a href="'+ f.path+'" title="'+ f.path +'" class="files"><img src="02.png" alt="mp3 file" height="30" width="10"  style="background-color:white; background:url(\'02.png)\' no-repeat"/> '+name+'<span class="name"><a"'+f.path+'">'+icon+'<span class="name"></a></li>');
+			var audi = $('<li class="files"><a href="'+ f.path+'" title="'+ f.path +'" class="files"><img src="02.png" alt="mp3 file" height="30" width="10"  style="background-color:white;"/> '+name+'<span class="name"><a"'+f.path+'">'+icon+'<span class="name"></a></li>');
 					audi.appendTo(fileList);
 					
 					}
 
-  				//	icon = '<span class="icon file f-'+fileType+'">.'+fileType+'</span>';
+  			
 					else{
 
 						var file = $('<li class="files"><img src="'+ f.path+'" title="'+ f.path +'" class="files""width: 50%"><a href="'+f.path+'"></a></li>');
